@@ -1542,7 +1542,6 @@ b {
         width: 3rem;
         height: 3rem;
         right: 2rem;
-        top: 0;
     }
     .nav__menuBg {
         top: -1.5rem;
@@ -2125,9 +2124,9 @@ b {
     transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
 .button--small .button__inner {
-    font-size: 1.4rem;
+    font-size: 2rem;
     font-weight: 600;
-    padding: 1.4rem 2.5rem;
+    padding: 2rem 2.5rem;
 }
 .button--shaded {
     background: #000;
@@ -10529,8 +10528,24 @@ html:not(.no-anima) .thanks__heading .letter {
     }
 }
 .clientLogos {
-    padding: 23rem 18rem 20rem;
+    padding: 7rem 7rem 3rem;
     background-color: #f3f3f3;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+@media screen and (min-width: 1280px) {
+    .clientLogos {
+        min-height: 150vh;
+    }
+}
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+    .clientLogos {
+        min-height: 200vh;
+    }
 }
 .clientLogos__logos {
     display: -webkit-box;
@@ -10572,8 +10587,7 @@ html:not(.no-anima) .thanks__heading .letter {
 }
 @media screen and (max-width: 600px) {
     .clientLogos {
-        padding: 7rem 1.5rem 10rem;
-        text-align: center;
+        padding: 5rem 1.5rem 2rem;
     }
     .clientLogos__logos {
         gap: 7rem 0;

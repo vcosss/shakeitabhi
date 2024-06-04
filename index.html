@@ -116,15 +116,30 @@
             }
 
             .video-container0 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 100vh; /* Adjust as needed */
+                align-self: stretch;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
             }
 
             .video-container {
                 overflow: hidden;
                 white-space: nowrap;
+                width: 100%;
+                flex-grow: 1;
+                flex-shrink: 1;
+                flex-basis: 0;
+            }
+
+            @media screen and (min-width: 600px) {
+                .video-container0 {
+                    flex-grow: 2;
+                }
+            }
+            @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+                .video-container0 {
+                    flex-grow: 1;
+                }
             }
 
             .video {
@@ -964,8 +979,8 @@
                 <section class="section section--white clientLogos accent-blue">
                     <div class="video-container0">
                         <iframe
-                            width="430"
-                            height="250"
+                            width="100%"
+                            height="100%"
                             src="https://www.youtube.com/embed/J1PfrVx-jsw?autoplay=1&mute=1"
                             title="YouTube video player"
                             allowfullscreen
@@ -978,7 +993,7 @@
                             ><iframe
                                 class="video"
                                 width="auto"
-                                height="250"
+                                height="100%"
                                 src="https://www.youtube.com/embed/DFgsPpnctVY?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
                             ></iframe
                         ></a>
@@ -987,7 +1002,7 @@
                             ><iframe
                                 class="video"
                                 width="auto"
-                                height="250"
+                                height="100%"
                                 src="https://www.youtube.com/embed/lZx_GD-4OzA?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
                             ></iframe
                         ></a>
@@ -996,7 +1011,7 @@
                             ><iframe
                                 class="video"
                                 width="auto"
-                                height="250"
+                                height="100%"
                                 src="https://www.youtube.com/embed/3J0AzVSmyAo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
                             ></iframe
                         ></a>
@@ -1005,7 +1020,7 @@
                             ><iframe
                                 class="video"
                                 width="auto"
-                                height="250"
+                                height="100%"
                                 src="https://www.youtube.com/embed/fEDW7k6x81s?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
                             ></iframe
                         ></a>
@@ -1014,7 +1029,7 @@
                             ><iframe
                                 class="video"
                                 width="auto"
-                                height="250"
+                                height="100%"
                                 src="https://www.youtube.com/embed/wLaQZjhXv0A?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
                             ></iframe
                         ></a>
@@ -1023,7 +1038,7 @@
                             ><iframe
                                 class="video"
                                 width="auto"
-                                height="250"
+                                height="100%"
                                 src="https://www.youtube.com/embed/01RnzgOyI8c?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
                             ></iframe
                         ></a>
@@ -1032,7 +1047,7 @@
                             ><iframe
                                 class="video"
                                 width="auto"
-                                height="250"
+                                height="100%"
                                 src="https://www.youtube.com/embed/Mz2TfRmz9t0?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
                             ></iframe
                         ></a>
@@ -1041,42 +1056,22 @@
                             ><iframe
                                 class="video"
                                 width="auto"
-                                height="250"
+                                height="100%"
                                 src="https://www.youtube.com/embed/dmPdx2wfhGo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
                             ></iframe
                         ></a>
-                        <div
-                            class="footer__linkCol footer__linkCta"
-                            style="margin-right: 50%; margin-top: 18px"
-                        >
-                            <a
-                                href="https://www.youtube.com/@ShakeITaBhi?sub_confirmation=1"
-                                class="button footer__button button--small"
-                                style="left: 50%"
-                            >
-                                <span
-                                    class="button__inner button--accent"
-                                    style="color: #007bff"
-                                    >Visit & Subscribe!</span
-                                >
-                            </a>
-                        </div>
                     </div>
-                    <div
-                        class="footer__linkCol footer__linkCta"
-                        style="margin-bottom: -150px"
-                    ></div>
 
-                    <div class="footer__subscribe">
-                        <div class="clientLogos__button">
-                            <a
-                                href="https://www.youtube.com/@ShakeITaBhi?sub_confirmation=1"
-                                class="button button--accent"
-                            >
-                            </a>
-                        </div>
-                    </div>
+                    <a
+                        href="https://www.youtube.com/@ShakeITaBhi?sub_confirmation=1"
+                        class="button footer__button button--small"
+                    >
+                        <span class="button__inner button--accent">
+                            Visit & Subscribe!
+                        </span>
+                    </a>
                 </section>
+
                 <section class="section cs__next accent-blue section--white">
                     <div class="cs__nextBg">
                         <canvas
