@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Abhishek Yadav</title>
+        <style>
+            body {
+                background: linear-gradient(
+                    142deg,
+                    rgba(63, 161, 251, 1) 0%,
+                    rgba(252, 70, 168, 1) 100%
+                );
+                margin: 0;
+                padding: 0;
+                font-family: "Exo 2", sans-serif;
+            }
+
+            .nav-bar {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1rem 2rem;
+                background: rgba(0, 0, 0, 0.5);
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .nav-bar a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 1rem;
+                font-size: 1rem;
+            }
+
+            .nav-bar a:hover {
+                text-decoration: underline;
+            }
+
+            .container,
+            .header,
+            .disclaimer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: #fff;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .container {
+                width: 100%;
+            }
+
+            .header {
+                height: 100vh;
+                margin-top: 5rem; /* Adjust for nav-bar height */
+            }
+
+            .title-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transform: skew(0, -10deg);
+            }
+
+            .sweet-title {
+                color: #fde9ff;
+                font-weight: 900;
+                text-transform: uppercase;
+                font-size: clamp(3rem, 10vw, 6rem);
+                line-height: 0.75em;
+                text-shadow: 3px 1px 1px #4af7ff, 2px 2px 1px #165bfb,
+                    4px 2px 1px #4af7ff, 3px 3px 1px #165bfb,
+                    5px 3px 1px #4af7ff, 4px 4px 1px #165bfb,
+                    6px 4px 1px #4af7ff, 5px 5px 1px #165bfb,
+                    7px 5px 1px #4af7ff, 6px 6px 1px #165bfb,
+                    8px 6px 1px #4af7ff, 7px 7px 1px #165bfb,
+                    9px 7px 1px #4af7ff;
+            }
+
+            .sweet-title span {
+                display: block;
+                position: relative;
+            }
+
+            .sweet-title span:before {
+                content: attr(data-text);
+                position: absolute;
+                text-shadow: 2px 2px 1px #e94aa1, -1px -1px 1px #c736f9,
+                    -2px 2px 1px #e94aa1, 1px -1px 1px #f736f9;
+                z-index: 1;
+            }
+
+            .sweet-title span:nth-child(1) {
+                padding-right: 2.25rem;
+            }
+
+            .sweet-title span:nth-child(2) {
+                padding-left: 2.25rem;
+            }
+
+            .disclaimer {
+                padding: 2rem 1rem;
+                background: rgba(0, 0, 0, 0.5);
+                margin-top: 5rem; /* Adjust for nav-bar height */
+            }
+
+            p {
+                font-size: clamp(1rem, 2.5vw, 1.5rem);
+                line-height: 1.5;
+                color: #fff;
+                letter-spacing: 0.1vw;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 10vw, 5rem);
+                margin: 0;
+                text-transform: uppercase;
+                color: #fff;
+                text-align: center;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: none;
+            }
+
+            @media (max-width: 768px) {
+                .header {
+                    height: auto;
+                }
+
+                .container,
+                .disclaimer {
+                    padding: 1rem;
+                }
+            }
+
+            @media (max-width: 400px) {
+                .sweet-title span:nth-child(1),
+                .sweet-title span:nth-child(2) {
+                    padding: 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="nav-bar">
+            <a href="/">Home</a>
+            <a href="asset/assets/abhishek-music_files/resume.pdf">Resume</a>
+            <a href="mailto:shakeitabhi.business@gmail.com">Contactㅤㅤㅤ</a>
+        </nav>
+        <section class="header" id="home">
+            <div class="title-wrapper">
+                <h1 class="sweet-title">
+                    <span data-text="Abhishek">Abhishek</span>
+                    <span data-text="Yadav">Yadavㅤ</span>
+                </h1>
+            </div>
+        </section>
+        <section class="disclaimer">
+            <div class="container">
+                <p>
+                    Hi, my name is Abhishek Yadav. I am an artist, designer, and
+                    content creator (YouTuber). I specialize in experience
+                    design, having completed a degree in Human Centered Design
+                    from the Srishti Institute of Art, Design and Technology in
+                    Bengaluru, India. I am confident, bold, and creative, and I
+                    love making interesting videos in public.
+                </p>
+                <p>
+                    I have multiple hobbies, including vlogging, sketching,
+                    singing, writing songs and poems, playing cricket,
+                    traveling, videography, and video editing. I run three
+                    YouTube channels:
+                </p>
+                <p>
+                    1. ShakeITaBhi: My main vlog channel where I capture
+                    important and interesting moments of my life, creating
+                    memories that entertain and inspire. Initially focused on my
+                    college life, the content includes insights about art and
+                    design colleges, college fests, and more. Now that I've
+                    graduated in 2024, I aim to explore and capture the world
+                    beyond college. This channel is a mix of knowledge and
+                    entertainment, and I post here most regularly.
+                </p>
+                <p>
+                    2. The Star Lion: This channel showcases my performances,
+                    including singing, poetry, rapping, dancing, and stand-up
+                    comedy. I write my own songs, poems, rap songs, and comedy
+                    scripts. "The Star Lion" is my stage name. Although this was
+                    my main channel initially, I became more consistent on
+                    ShakeITaBhi. I upload on The Star Lion only when I perform.
+                </p>
+                <p>
+                    3. The Real Abhishek Yadav: A motivational and inspirational
+                    channel where I share my personal thoughts, inspire people,
+                    and offer hope and motivation. This was my first
+                    face-recording channel, and it helped me gain confidence in
+                    speaking on camera.
+                </p>
+                <p>
+                    Before these three active channels, I started with a gaming
+                    channel called ShinyEagleGaming during the COVID-19
+                    pandemic. This was my first step on YouTube, where I
+                    recorded and uploaded gameplay videos. Although it didn't
+                    gain much traction, it gave me the confidence to start a new
+                    channel with face recordings, leading to the creation of The
+                    Real Abhishek Yadav.
+                </p>
+                <p>
+                    My journey on YouTube has taught me many things and helped
+                    me grow as a person. Now, my goal is to create an ecosystem
+                    with all my channels, offering a space for knowledge, fun,
+                    and entertainment. I invite you to explore everything from
+                    my YouTube videos to my design work on this website. This
+                    platform connects you to all my content and services. In the
+                    future, I aim to keep upgrading both myself and this
+                    website.
+                </p>
+                <p>
+                    Join me on this interesting journey to become better
+                    versions of ourselves and inspire others, all while having
+                    fun and being entertained. Let’s shake up minds together.
+                </p>
+                <a href="https://shakeitabhi.com"><h1>HOME</h1></a>
+            </div>
+        </section>
+    </body>
+</html>
