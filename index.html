@@ -1,1449 +1,1369 @@
 <!DOCTYPE html>
 <html class="is-animating is-waiting" lang="en">
-    <head>
-        <title>ShakeItAbhi</title>
-        <meta
-            name="description"
-            content="I love making quality content for knowledge and entertainment!"
-        />
-
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="ShakeItAbhi" />
-        <meta
-            property="og:description"
-            content="I love making quality content for knowledge and entertainment!"
-        />
-        <meta property="og:url" content="https://shakeitabhi.com/" />
-        <meta property="og:site_name" content="ShakeItAbhi" />
-
-        <meta property="og:image" content="https://shakeitabhi.com/1a.png" />
-        <meta
-            property="og:image:secure_url"
-            content="https://shakeitabhi.com/1a.png"
-        />
-
-        <meta name="twitter:site" content="ShakeItAbhi" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ShakeItAbhi" />
-        <meta
-            name="twitter:description"
-            content="I love making quality content for knowledge and entertainment!"
-        />
-
-        <meta name="twitter:image" content="https://shakeitabhi.com/1a.png" />
-        <meta name="twitter:image:width" content="280" />
-        <meta name="twitter:image:height" content="280" />
-
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
-
-        <link
-            rel="preload"
-            href="/dist/scripts.min.js?v=166f498ba7c9334753aae8a7a46a7d2f6912f9bd"
-            as="script"
-        />
-        <link
-            rel="preload"
-            href="/dist/style.min.css?v=166f498ba7c9334753aae8a7a46a7d2f6912f9bd"
-            as="style"
-        />
-
-        <link
-            rel="icon"
-            type="image/png"
-            href="icons/1a_32.png"
-            sizes="32x32"
-        />
-
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="asset/dist/style.min.css"
-        />
-
-        <script
-            charset="ISO-8859-1"
-            src="asset/assets/external/E-v1.js"
-        ></script>
-
-        <script
-            src="https://www.google.com/recaptcha/api.js?render=6LfuomweAAAAANQSSBhXaTgubkGRUb8XvpxtfD1l"
-            async="false"
-        ></script>
-
-        <style>
-            .footer__bottom {
-                padding: 14px 15px;
-            }
-            body {
-                background-color: #ffffff;
-            }
-
-            .form-container {
-                top: auto;
-                align-items: center;
-                background: black;
-                border-radius: 12px;
-                box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-                max-width: 250px; /* Optional: limit the width */
-                margin: 5px; /* Optional: center the form */
-            }
-
-            .form-container input[type="email"] {
-                margin-top: 5px; /* Reduced margin */
-                width: 98%;
-                padding: 12px; /* Reduced padding */
-                margin: 3px 0; /* Reduced margin */
-                border: 3px solid #c5c3c3;
-                border-radius: 9px;
-                margin-left: 2px; /* Move border right */
-            }
-
-            .form-container input[type="submit"] {
-                margin-top: 1px; /* Reduced margin */
-                width: 98%;
-                padding: 15px; /* Reduced padding */
-                border: #ffffff;
-                border-radius: 9px;
-                background: #1880f8;
-                color: #fff;
-                cursor: pointer;
-                margin-left: 2px; /* Move border right */
-                margin-bottom: 3px;
-            }
-
-            .form-container input[type="submit"]:hover {
-                background: #0056b3;
-            }
-
-            .video-container0 {
-                align-self: stretch;
-                flex-grow: 1;
-                flex-shrink: 1;
-                flex-basis: 0;
-            }
-
-            .video-container {
-                overflow: hidden;
-                white-space: nowrap;
-                width: 100%;
-                flex-grow: 1;
-                flex-shrink: 1;
-                flex-basis: 0;
-            }
-
-            @media screen and (min-width: 600px) {
-                .video-container0 {
-                    flex-grow: 2;
-                }
-            }
-            @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
-                .video-container0 {
-                    flex-grow: 1;
-                }
-            }
-
-            .video {
-                display: inline-block;
-                margin-right: 20px; /* Adjust as needed */
-                animation: moveRightToLeft 30s linear infinite; /* Adjust duration as needed */
-            }
-
-            @keyframes moveRightToLeft {
-                0% {
-                    transform: translateX(100%);
-                }
-                100% {
-                    transform: translateX(
-                        -1000%
-                    ); /* Adjust based on the number of videos */
-                }
-            }
-            /* Popup styles */
-            .color {
-                color: #691fff;
-            }
-            .popup {
-                display: none;
-                position: fixed;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                background-color: #ffffff;
-                border-radius: 10px;
-                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-                padding: 15%;
-                max-width: 80%;
-                text-align: center;
-                z-index: 1000;
-            }
-
-            .popup h2 {
-                color: #333333;
-                font-size: 24px;
-                margin-bottom: 20px;
-            }
-
-            .popup p {
-                color: #666666;
-                font-size: 18px;
-                line-height: 1.5;
-                margin-bottom: 30px;
-            }
-
-            .popup button {
-                background-color: #ff0000;
-                margin-left: 93%;
-                color: #ffffff;
-                border: none;
-                border-radius: 5px;
-                padding: 10px 20px;
-                font-size: 16px;
-                cursor: pointer;
-                transition: background-color 0.3s;
-            }
-
-            .popup button:hover {
-                margin-top: 3px;
-                background-color: #ff0000;
-            }
-
-            .close-but {
-                margin-left: 0px;
-                background-color: #ffffff;
-                color: #ff0000;
-                font-size: 26px;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 9999;
-            }
-
-            .overlay {
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-                z-index: 999;
-            }
-
-            /* Styles for the notice */
-            .design {
-                background-color: #691fff;
-                color: #000000;
-                padding: 12px 24px;
-                font-size: 16px;
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                z-index: 9999;
-            }
-            .call-button,
-            .whatsapp-button {
-                position: fixed;
-                z-index: 1000; /* Ensure they stay on top of other elements */
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 80px; /* Adjust the size as needed */
-                height: 80px; /* Make height equal to width for a perfect circle */
-                border-radius: 50%; /* Make it a circle */
-                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-                text-decoration: none;
-                transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for box-shadow */
-            }
-
-            .whatsapp-button {
-                bottom: 245px; /* Distance from the bottom */
-                right: 6px; /* Distance from the right */
-            }
-
-            .call-button {
-                bottom: 330px; /* Distance from the bottom */
-                right: 6px; /* Distance from the right */
-            }
-
-            .whatsapp-button img,
-            .call-button img {
-                width: 70%; /* Adjust the icon size as needed */
-                height: auto;
-            }
-
-            .whatsapp-button:hover {
-                background-color: #7f8283; /* Darker green on hover */
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Smaller shadow on hover */
-            }
-
-            .call-button:hover {
-                background-color: #cc2822; /* Darker blue on hover */
-                box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Even smaller shadow on hover */
-            }
-
-            body,
-            html {
-                height: 70%;
-                margin: 0;
-            }
-
-            #slideshow {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        </style>
-    </head>
-    <body>
-        <a href="https://www.youtube.com/@ShakeITaBhi" class="call-button">
-            <img
-                src="asset/assets/abhishek-music_files/youtube1.png"
-                alt="Youtube"
-            />
-        </a>
-        <a
-            href="mailto:shakeitabhi.business@gmail.com"
-            class="whatsapp-button"
-            target="_blank"
-        >
-            <img
-                src="asset/assets/abhishek-music_files/email1.png"
-                alt="email"
-            />
-        </a>
-
-        <div id="container">
-            <div class="csBG" id="cs-bg"></div>
-            <div class="transition-swipe-before"></div>
-            <div class="transition-swipe-after"></div>
-
-            <nav class="nav" id="nav">
-                <div class="nav__bar">
-                    <a href="/" class="nav__logo">
-                        <img src="1a.png" alt="Logo" width="60px" />
-                    </a>
-
-                    <a
-                        id="menu-toggle"
-                        class="nav__toggle"
-                        aria-label="Open the menu"
-                        role="”button”,"
-                        tabindex="”0”,"
-                        aria-expanded="”false”"
-                    >
-                        <span class="hamburger">
-                            <span class="hamburger__line hamburger__top"></span>
-                            <span class="hamburger__line hamburger__mid"></span>
-                            <span
-                                class="hamburger__line hamburger__bottom"
-                            ></span>
-                        </span>
-                        <span class="nav__toggleTopBorders"></span>
-                        <span class="nav__toggleBottomBorders"></span>
-                    </a>
-
-                    <div class="nav__menuBg"></div>
-                </div>
-
-                <div class="nav__overlay" id="menu-overlay"></div>
-
-                <div class="nav__menu">
-                    <div class="nav__links">
-                        <a href="about.html" class="nav__link"
-                            ><span class="nav__linkInner">About</span></a
-                        >
-                        <a
-                            href="asset/assets/abhishek-music_files/resume.pdf"
-                            class="nav__link"
-                            download="/asset/assets/abhishek-music_files/resume.pdf"
-                            ><span class="nav__linkInner">Resume</span></a
-                        >
-                        <a href="" class="nav__link"
-                            ><span class="nav__linkInner">Shop soon!</span></a
-                        >
-                        <a
-                            href="mailto:shakeitabhi.business@gmail.com"
-                            class="nav__link"
-                            ><span class="nav__linkInner">Contact</span></a
-                        >
-                    </div>
-
-                    <div class="nav__buttons">
-                        <a
-                            href="https://www.youtube.com/@ShakeITaBhi"
-                            target="_blank"
-                            class="button nav__menuButton"
-                        >
-                            <span class="button__inner">YouTube</span>
-                        </a>
-                        <div class="socialLinks">
-                            <a
-                                class="socialLinks__link"
-                                href="https://www.instagram.com/therealabhishekyadav/"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Instagram
-                            </a>
-                            <a
-                                class="socialLinks__link"
-                                href="https://www.linkedin.com/in/therealabhishekyadav"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Linkedin
-                            </a>
-                            <a
-                                class="socialLinks__link"
-                                href="https://x.com/realabhishekydv"
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                Twitter
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="nav__footer">
-                        <span class="footer__spacer"> | </span>
-                    </div>
-                </div>
-            </nav>
-            <main id="main" class="animation-move">
-                <section class="homeHeader scroll pal">
-                    <div class="homeHeader__bg">
-                        <canvas
-                            class="wobble"
-                            data-wobble-color="#212224"
-                            data-wobble-linewidth="0.01"
-                            data-wobble-cellsize="0.025"
-                        ></canvas>
-                    </div>
-
-                    <div class="homeHeader__content">
-                        <h1 class="h1 homeHeader__heading">
-                            <span
-                                class="cycle anima cycle--pal"
-                                data-anima-delay="25"
-                                >~Explore~Enjoy~Experience</span
-                            >
-                        </h1>
-
-                        <div
-                            class="homeHeader__paragraph body body--large anima fadeUp"
-                            data-anima-delay="36"
-                        >
-                            <p class="plaintext">
-                                I love making quality content for knowledge and
-                                entertainment!
-                            </p>
-                        </div>
-
-                        <img
-                            src="https://www.animusstudios.com//assets/images/ui/footer_icons.png"
-                            class="anima fade"
-                            data-anima-delay="37"
-                        />
-                    </div>
-
-                    <div
-                        class="homeHeader__videoWrap anima"
-                        data-anima-delay="30"
-                    >
-                        <video
-                            id="slideshow"
-                            src="asset/assets/abhishek-music_files/SHakeITaBhi Brand Video 9mb.mp4"
-                            autoplay
-                            muted
-                            loop
-                        >
-                            <!-- Placeholder image -->
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="homeHeader__introVideo">
-                            <div
-                                class="wistiaEmbed wistia--wait"
-                                data-wistia="lrhv3bwq"
-                                data-wistia-autoplay
-                                data-wistia-loop
-                                data-wistia-muted
-                                data-wistia-noplaybar="1"
-                            ></div>
-                        </div>
-                    </div>
-
-                    <script>
-                        document.addEventListener(
-                            "DOMContentLoaded",
-                            function () {
-                                var video =
-                                    document.getElementById("slideshow");
-                                video.play();
-                            }
-                        );
-                    </script>
-                </section>
-
-                <section class="homeAbout section section--white accent-blue">
-                    <h2 class="h2 scroll">
-                        <span class="cycle anima"> Hello! </span>
-                    </h2>
-
-                    <div class="homeAbout__content scroll">
-                        <div class="richtext body body--bumpUp">
-                            <p>
-                                My name is Abhishek and I am a 4th year student
-                                at an art and design institute - Srishti
-                                Institute of Art, Design and Technology. I'm an
-                                occassionally extrovert guy who makes videos
-                                that add happiness and knowledge to my
-                                subscribers' lives. If you want to know about
-                                art, Design and have entertainment altogether,
-                                join me during my college life! Let's grow and
-                                have fun together!.
-                            </p>
-                        </div>
-
-                        <a href="/about.html" class="button button--accent">
-                            <span class="button__inner">About</span>
-                        </a>
-                    </div>
-
-                    <div class="homeAbout__decoBlocks dbs u-hideMobile">
-                        <div
-                            class="db anima scroll cs11 ce11 rs1 re2 red brtl brtr"
-                        ></div>
-                        <div class="db anima scroll cs10 ce11 rs3 re4 black">
-                            <picture>
-                                <img
-                                    src="asset/assets/abhishek-music_files/315899542_429151356087814_8904967392248218121_n.webp"
-                                    alt="abhishek"
-                                />
-                            </picture>
-                        </div>
-                        <div class="db anima scroll cs1 ce1 rs5 re5 white">
-                            <picture>
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=9a064981814ce92f40b4028fcaf91675 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=9a064981814ce92f40b4028fcaf91675 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=9a064981814ce92f40b4028fcaf91675 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=9a064981814ce92f40b4028fcaf91675 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                />
-                                <img
-                                    src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f"
-                                    width="160"
-                                    height="160"
-                                    class="img"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                        <div
-                            class="db anima scroll cs3 ce4 rs5 re5 blue brtl"
-                        ></div>
-                        <div class="db anima scroll cs5 ce7 rs5 re6 black">
-                            <picture>
-                                <img
-                                    src="asset/assets/abhishek-music_files/419904890_1072239070660919_3679322503260039185_n.heic"
-                                    alt="abhi's"
-                                />
-                            </picture>
-                        </div>
-                        <div
-                            class="db anima scroll cs8 ce8 rs5 re5 yellow brtl brtr brbl brbr"
-                        ></div>
-                        <div class="db anima scroll cs9 ce10 rs5 re6 blue">
-                            <picture>
-                                <img
-                                    src="asset/assets/abhishek-music_files/abhi18.jpg"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                        <div class="db anima scroll cs1 ce2 rs6 re8 red brbr">
-                            <picture>
-                                <img
-                                    src="asset/assets/abhishek-music_files/abhi19.png"
-                                    alt="abhishek"
-                                />
-                            </picture>
-                        </div>
-                        <div class="db anima scroll cs5 ce7 rs7 re8 white">
-                            <picture>
-                                <img
-                                    src="asset/assets/abhishek-music_files/abhishek.png"
-                                    alt="abhis"
-                                />
-                            </picture>
-                        </div>
-                        <div class="db anima scroll cs11 ce11 rs7 re8 red">
-                            <picture>
-                                <img
-                                    src="asset/assets/abhishek-music_files/436513576_325545813873504_6423678331781002738_n.jpg"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                        <div
-                            class="db anima scroll cs1 ce4 rs9 re10 black"
-                        ></div>
-                        <div
-                            class="db anima scroll cs8 ce10 rs9 re10 blue brbr"
-                        ></div>
-                    </div>
-
-                    <div class="homeAbout__decoBlocks dbs u-showMobile">
-                        <div
-                            class="db anima scroll cs1 ce3 rs1 re1 blue brtl"
-                        ></div>
-                        <div class="db anima scroll cs6 ce6 rs1 re1 white">
-                            <picture>
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=e034414e3898d3ae1e641ee4a654d5df 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=e034414e3898d3ae1e641ee4a654d5df 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=e034414e3898d3ae1e641ee4a654d5df 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=e034414e3898d3ae1e641ee4a654d5df 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                />
-                                <img
-                                    src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8"
-                                    width="150"
-                                    height="150"
-                                    class="img"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                        <div class="db anima scroll cs1 ce1 rs2 re4 red brbr">
-                            <picture>
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                />
-                                <img
-                                    src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc"
-                                    width="150"
-                                    height="234"
-                                    class="img"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                        <div class="db anima scroll cs4 ce6 rs2 re4 black">
-                            <picture>
-                                <img
-                                    src="asset/assets/abhishek-music_files/abhi17.jpg"
-                                    alt="abhis"
-                                />
-                            </picture>
-                        </div>
-                        <div class="db anima scroll cs1 ce3 rs5 re7 blue">
-                            <picture>
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=0067511097a2f76dfddb558e5da7cc52 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=0067511097a2f76dfddb558e5da7cc52 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=0067511097a2f76dfddb558e5da7cc52 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=0067511097a2f76dfddb558e5da7cc52 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                />
-                                <img
-                                    src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9"
-                                    width="300"
-                                    height="291"
-                                    class="img"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                        <div class="db anima scroll cs2 ce5 rs8 re10 black">
-                            <picture>
-                                <img
-                                    src="asset/assets/abhishek-music_files/abhi16.jpg"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                        <div
-                            class="db anima scroll cs1 ce6 rs12 re15 black"
-                        ></div>
-                        <div
-                            class="db anima scroll cs6 ce6 rs8 re8 yellow brtl brtr brbl brbr"
-                        ></div>
-                        <div class="db anima scroll cs2 ce5 rs11 re13 white">
-                            <picture>
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=9d6f79c0d2c9c97c603e93cbde568646 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=9d6f79c0d2c9c97c603e93cbde568646 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=9d6f79c0d2c9c97c603e93cbde568646 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=9d6f79c0d2c9c97c603e93cbde568646 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                />
-                                <img
-                                    src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0"
-                                    width="300"
-                                    height="213"
-                                    class="img"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                        <div class="db anima scroll cs6 ce6 rs11 re14 red">
-                            <picture>
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 2x
-                                    "
-                                    media="(max-width: 800px)"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                    type="image/webp"
-                                />
-                                <source
-                                    srcset="
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 1x,
-                                        https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 2x
-                                    "
-                                    media="(min-width: 800px)"
-                                />
-                                <img
-                                    src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc"
-                                    width="150"
-                                    height="234"
-                                    class="img"
-                                    alt=""
-                                />
-                            </picture>
-                        </div>
-                    </div>
-
-                    <div class="homeAbout__bottom">
-                        <p class="plaintext body body--bumpUp">
-                            Crafting stories!.
-                        </p>
-                    </div>
-                </section>
-                <section class="aboutValues aboutValues--onlyBottom">
-                    <div class="aboutValues__values pal scroll">
-                        <div class="aboutValues__heading h1">
-                            <span class="cycle anima">~My YouTube:</span>
-                        </div>
-                        <div class="aboutValues__cards">
-                            <a href="https://youtube.com/@shakeitabhi"
-                                ><div
-                                    class="aboutValues__card aboutValues__card--blue pal-moveX"
-                                    data-pal="-5"
-                                    data-pal-push="6.5"
-                                    data-pal-lerp="2.5"
-                                >
-                                    <div class="aboutValues__cardIcon">
-                                        <picture>
-                                            <img
-                                                src="asset/assets/vlogs.png"
-                                                alt="vlogs"
-                                                width="110px"
-                                                height="110px"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <a href="https://youtube.com/@shakeitabhi"
-                                        ><div class="aboutValues__cardContent">
-                                            <div class="aboutValues__cardTitle">
-                                                Vlogs & Entertainment
-                                            </div>
-                                            <div
-                                                class="aboutValues__cardDescription"
-                                            >
-                                                My channel where I love making
-                                                quality content for knowledge
-                                                and entertainment!
-                                            </div>
-                                        </div></a
-                                    >
-                                </div></a
-                            >
-                            <a href="https://youtube.com/@thestarlion"
-                                ><div
-                                    class="aboutValues__card aboutValues__card--red pal-moveX"
-                                    data-pal="-5"
-                                    data-pal-push="6.5"
-                                    data-pal-lerp="4"
-                                >
-                                    <div class="aboutValues__cardIcon">
-                                        <picture>
-                                            <img
-                                                src="asset/assets/artist.png"
-                                                alt="art"
-                                                width="110px"
-                                                height="110px"
-                                            />
-                                        </picture>
-                                    </div>
-                                    <a
-                                        href="https://youtube.com/@thestarlion?si=NPTZF2PEMWV0a-bU"
-                                        ><div class="aboutValues__cardContent">
-                                            <div class="aboutValues__cardTitle">
-                                                Creativity & Performance
-                                            </div>
-                                            <div
-                                                class="aboutValues__cardDescription"
-                                            >
-                                                The same ideas are boring. This
-                                                is my channel where I perform.
-                                            </div>
-                                        </div></a
-                                    >
-                                </div></a
-                            >
-                            <a href="https://youtube.com/@therealabhishekyadav"
-                                ><div
-                                    class="aboutValues__card aboutValues__card--yellow pal-moveX"
-                                    data-pal="-5"
-                                    data-pal-push="6.5"
-                                    data-pal-lerp="5.5"
-                                >
-                                    <div class="aboutValues__cardIcon">
-                                        <picture>
-                                            <a
-                                                href="https://youtube.com/@therealabhishekyadav"
-                                                ><img
-                                                    src="asset/assets/motivational-speech.png"
-                                                    alt="motivational-speech"
-                                                    width="110px"
-                                                    height="110px"
-                                            /></a>
-                                        </picture>
-                                    </div>
-                                    <a
-                                        href="https://youtube.com/@therealabhishekyadav"
-                                    >
-                                        <div class="aboutValues__cardContent">
-                                            <div class="aboutValues__cardTitle">
-                                                Motivational & Inspiring
-                                            </div>
-                                            <div
-                                                class="aboutValues__cardDescription"
-                                            >
-                                                My third channel where I do
-                                                motivational and inspirational
-                                                videos are uploaded and and some
-                                                other related videos which will
-                                                help you in your life.
-                                            </div>
-                                        </div></a
-                                    >
-                                </div></a
-                            >
-                        </div>
-                    </div>
-
-                    <div class="aboutValues__side sideDec">
-                        <div class="sideDec__lines"></div>
-                        <div class="sideDec__text">Abhishek</div>
-                    </div>
-                </section>
-
-                <section class="section section--white clientLogos accent-blue">
-                    <div class="video-container0">
-                        <iframe
-                            width="100%"
-                            height="100%"
-                            src="https://www.youtube.com/embed/J1PfrVx-jsw?autoplay=1&mute=1"
-                            title="YouTube video player"
-                            allowfullscreen
-                        ></iframe>
-                    </div>
-
-                    <div class="video-container">
-                        <a
-                            href="https://www.youtube.com/embed/DFgsPpnctVY?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ><iframe
-                                class="video"
-                                width="auto"
-                                height="100%"
-                                src="https://www.youtube.com/embed/DFgsPpnctVY?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ></iframe
-                        ></a>
-                        <a
-                            href="https://www.youtube.com/embed/lZx_GD-4OzA?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ><iframe
-                                class="video"
-                                width="auto"
-                                height="100%"
-                                src="https://www.youtube.com/embed/lZx_GD-4OzA?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ></iframe
-                        ></a>
-                        <a
-                            href="https://www.youtube.com/embed/3J0AzVSmyAo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ><iframe
-                                class="video"
-                                width="auto"
-                                height="100%"
-                                src="https://www.youtube.com/embed/3J0AzVSmyAo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ></iframe
-                        ></a>
-                        <a
-                            href="https://www.youtube.com/embed/fEDW7k6x81s?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ><iframe
-                                class="video"
-                                width="auto"
-                                height="100%"
-                                src="https://www.youtube.com/embed/fEDW7k6x81s?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ></iframe
-                        ></a>
-                        <a
-                            href="https://www.youtube.com/embed/wLaQZjhXv0A?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ><iframe
-                                class="video"
-                                width="auto"
-                                height="100%"
-                                src="https://www.youtube.com/embed/wLaQZjhXv0A?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ></iframe
-                        ></a>
-                        <a
-                            href="https://www.youtube.com/embed/01RnzgOyI8c?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ><iframe
-                                class="video"
-                                width="auto"
-                                height="100%"
-                                src="https://www.youtube.com/embed/01RnzgOyI8c?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ></iframe
-                        ></a>
-                        <a
-                            href="https://www.youtube.com/embed/Mz2TfRmz9t0?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ><iframe
-                                class="video"
-                                width="auto"
-                                height="100%"
-                                src="https://www.youtube.com/embed/Mz2TfRmz9t0?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ></iframe
-                        ></a>
-                        <a
-                            href="https://www.youtube.com/embed/dmPdx2wfhGo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ><iframe
-                                class="video"
-                                width="auto"
-                                height="100%"
-                                src="https://www.youtube.com/embed/dmPdx2wfhGo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
-                            ></iframe
-                        ></a>
-                    </div>
-
-                    <a
-                        href="https://www.youtube.com/@ShakeITaBhi?sub_confirmation=1"
-                        class="button footer__button button--small"
-                    >
-                        <span class="button__inner button--accent">
-                            Visit & Subscribe!
-                        </span>
-                    </a>
-                </section>
-
-                <section class="section cs__next accent-blue section--white">
-                    <div class="cs__nextBg">
-                        <canvas
-                            class="wobble"
-                            data-wobble-color="#FFFFFF"
-                            data-wobble-linewidth="0.6"
-                            data-wobble-cellsize="0.07"
-                        ></canvas>
-                    </div>
-
-                    <div class="section__inner">
-                        <div class="cs__nextContent"></div>
-                    </div>
-                </section>
-
-                <footer class="footer pal">
-                    <div
-                        class="footer__inner pal-moveY pal-clamp"
-                        data-pal="6"
-                        data-pal-push="1.5"
-                    >
-                        <div class="footer__top">
-                            <a href="/" class="footer__logo">
-                                <img src="1a.png" alt="logo" width="60px" />
-                            </a>
-
-                            <div class="footer__links">
-                                <div class="footer__linkCol">
-                                    <a
-                                        href="/about.html"
-                                        class="footer__link underlink"
-                                        >About</a
-                                    >
-
-                                    <a
-                                        href="asset/assets/abhishek-music_files/resume.pdf"
-                                        class="footer__link underlink"
-                                        >Resume</a
-                                    >
-
-                                    <a class="footer__link underlink"
-                                        >Shop Soon!</a
-                                    >
-                                    <a
-                                        href="mailto:shakeitabhi.business@gmail.com"
-                                        class="footer__link underlink"
-                                        ><span class="nav__linkInner"
-                                            >Contact</span
-                                        ></a
-                                    >
-                                </div>
-                                <div class="footer__linkCol"></div>
-                                <div class="footer__linkCol footer__linkCta">
-                                    <div class="form-container">
-                                        <form
-                                            action="save_email.php"
-                                            method="post"
-                                        >
-                                            <input
-                                                type="email"
-                                                name="email"
-                                                style="
-                                                    color: white;
-                                                    padding: 15px;
-                                                "
-                                                placeholder="Drop Email here!"
-                                                required
-                                            />
-                                            <input
-                                                type="submit"
-                                                value="Submit"
-                                            />
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="footer__mid scroll">
-                        <span class="footer__bigText anima cycle"
-                            >Shake It Abhi!</span
-                        >
-                        <div class="footer__subscribe"></div>
-                        <div class="footer__decorations">
-                            <a
-                                class="iconButton iconButton--arrow"
-                                onclick="lenis.scrollTo(0);"
-                                href="/"
-                            >
-                                <span class="iconButton__arrow">
-                                    <svg
-                                        width="26px"
-                                        height="20px"
-                                        viewbox="0 0 26 20"
-                                        version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    >
-                                        <path
-                                            class="fill"
-                                            d="M25.8915513,10.2890553 C26.0173702,9.99206548 26.0173702,9.65612614 25.8915513,9.35913628 C25.8286419,9.20942418 25.7385951,9.07553531 25.6238778,8.96355553 L16.9029027,0.356935555 C16.420597,-0.118978518 15.6397799,-0.118978518 15.1587077,0.356935555 C14.676402,0.831632456 14.676402,1.60210204 15.1587077,2.07801612 L20.8995023,7.74273247 C21.2226842,8.06163142 20.9932497,8.60692427 20.5356144,8.60692427 L1.23351841,8.60692427 C0.551382727,8.60692427 0,9.15221712 0,9.82409581 C0,10.4959745 0.551382727,11.0412674 1.23351841,11.0412674 L20.5356144,11.0412674 C20.9932497,11.0412674 21.2226842,11.5865602 20.8995023,11.9066763 L15.1587077,17.5701755 C14.676402,18.0460896 14.676402,18.8165592 15.1587077,19.2912561 C15.3992438,19.5298217 15.7150245,19.6478873 16.0308052,19.6478873 C16.3465859,19.6478873 16.6623666,19.5298217 16.9029027,19.2912561 L25.6238778,10.6858533 C25.7385951,10.5726563 25.8286419,10.4387674 25.8915513,10.2890553"
-                                        ></path>
-                                    </svg>
-                                </span>
-                                <span class="iconButton__arrow">
-                                    <svg
-                                        width="26px"
-                                        height="20px"
-                                        viewbox="0 0 26 20"
-                                        version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                    >
-                                        <path
-                                            class="fill"
-                                            d="M25.8915513,10.2890553 C26.0173702,9.99206548 26.0173702,9.65612614 25.8915513,9.35913628 C25.8286419,9.20942418 25.7385951,9.07553531 25.6238778,8.96355553 L16.9029027,0.356935555 C16.420597,-0.118978518 15.6397799,-0.118978518 15.1587077,0.356935555 C14.676402,0.831632456 14.676402,1.60210204 15.1587077,2.07801612 L20.8995023,7.74273247 C21.2226842,8.06163142 20.9932497,8.60692427 20.5356144,8.60692427 L1.23351841,8.60692427 C0.551382727,8.60692427 0,9.15221712 0,9.82409581 C0,10.4959745 0.551382727,11.0412674 1.23351841,11.0412674 L20.5356144,11.0412674 C20.9932497,11.0412674 21.2226842,11.5865602 20.8995023,11.9066763 L15.1587077,17.5701755 C14.676402,18.0460896 14.676402,18.8165592 15.1587077,19.2912561 C15.3992438,19.5298217 15.7150245,19.6478873 16.0308052,19.6478873 C16.3465859,19.6478873 16.6623666,19.5298217 16.9029027,19.2912561 L25.6238778,10.6858533 C25.7385951,10.5726563 25.8286419,10.4387674 25.8915513,10.2890553"
-                                        ></path>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="footer__bottom">
-                        <span class="footer__legal">
-                            <a>All Rights Reserved <span>&copy; 2024</span></a>
-                        </span>
-                        <span class="footer__social underlink">
-                            <div class="socialLinks">
-                                <a
-                                    class="socialLinks__link"
-                                    href="https:/youtube.com/@shakeitabhi/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Youtube
-                                </a>
-                                <a
-                                    class="socialLinks__link"
-                                    href="https://www.instagram.com/therealabhishekyadav/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Instagram
-                                </a>
-                                <a
-                                    class="socialLinks__link"
-                                    href="https://www.linkedin.com/in/therealabhishekyadav/"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Linkedin
-                                </a>
-                                <a
-                                    class="socialLinks__link"
-                                    href="https://x.com/realabhishekydv"
-                                    target="_blank"
-                                    rel="noreferrer"
-                                >
-                                    Twitter
-                                </a>
-                            </div>
-                        </span>
-                        <span class="footer__legal underlink"> </span>
-                    </div>
-                </footer>
-            </main>
+  <head>
+    <title>ShakeItAbhi</title>
+    <meta
+      name="description"
+      content="I love making quality content for knowledge and entertainment!"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ShakeItAbhi" />
+    <meta
+      property="og:description"
+      content="I love making quality content for knowledge and entertainment!"
+    />
+    <meta property="og:url" content="https://shakeitabhi.com/" />
+    <meta property="og:site_name" content="ShakeItAbhi" />
+
+    <meta property="og:image" content="https://shakeitabhi.com/1a.png" />
+    <meta
+      property="og:image:secure_url"
+      content="https://shakeitabhi.com/1a.png"
+    />
+
+    <meta name="twitter:site" content="ShakeItAbhi" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="ShakeItAbhi" />
+    <meta
+      name="twitter:description"
+      content="I love making quality content for knowledge and entertainment!"
+    />
+
+    <meta name="twitter:image" content="https://shakeitabhi.com/1a.png" />
+    <meta name="twitter:image:width" content="280" />
+    <meta name="twitter:image:height" content="280" />
+
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      rel="preload"
+      href="/dist/scripts.min.js?v=166f498ba7c9334753aae8a7a46a7d2f6912f9bd"
+      as="script"
+    />
+    <link
+      rel="preload"
+      href="/dist/style.min.css?v=166f498ba7c9334753aae8a7a46a7d2f6912f9bd"
+      as="style"
+    />
+
+    <link rel="icon" type="image/png" href="icons/1a_32.png" sizes="32x32" />
+
+    <link rel="stylesheet" type="text/css" href="asset/dist/style.min.css" />
+
+    <script charset="ISO-8859-1" src="asset/assets/external/E-v1.js"></script>
+
+    <script
+      src="https://www.google.com/recaptcha/api.js?render=6LfuomweAAAAANQSSBhXaTgubkGRUb8XvpxtfD1l"
+      async="false"
+    ></script>
+
+    <style>
+      .footer__bottom {
+        padding: 14px 15px;
+      }
+      body {
+        background-color: #ffffff;
+      }
+
+      .form-container {
+        top: auto;
+        align-items: center;
+        background: black;
+        border-radius: 12px;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        max-width: 250px; /* Optional: limit the width */
+        margin: 5px; /* Optional: center the form */
+      }
+
+      .form-container input[type="email"] {
+        margin-top: 5px; /* Reduced margin */
+        width: 98%;
+        padding: 12px; /* Reduced padding */
+        margin: 3px 0; /* Reduced margin */
+        border: 3px solid #c5c3c3;
+        border-radius: 9px;
+        margin-left: 2px; /* Move border right */
+      }
+
+      .form-container input[type="submit"] {
+        margin-top: 1px; /* Reduced margin */
+        width: 98%;
+        padding: 15px; /* Reduced padding */
+        border: #ffffff;
+        border-radius: 9px;
+        background: #1880f8;
+        color: #fff;
+        cursor: pointer;
+        margin-left: 2px; /* Move border right */
+        margin-bottom: 3px;
+      }
+
+      .form-container input[type="submit"]:hover {
+        background: #0056b3;
+      }
+
+      .video-container0 {
+        align-self: stretch;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+      }
+
+      .video-container {
+        overflow: hidden;
+        white-space: nowrap;
+        width: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0;
+      }
+
+      @media screen and (min-width: 600px) {
+        .video-container0 {
+          flex-grow: 2;
+        }
+      }
+      @media screen and (max-height: 425px) and (min-aspect-ratio: 7/4) {
+        .video-container0 {
+          flex-grow: 1;
+        }
+      }
+
+      .video {
+        display: inline-block;
+        margin-right: 20px; /* Adjust as needed */
+        animation: moveRightToLeft 30s linear infinite; /* Adjust duration as needed */
+      }
+
+      @keyframes moveRightToLeft {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(
+            -1000%
+          ); /* Adjust based on the number of videos */
+        }
+      }
+      /* Popup styles */
+      .color {
+        color: #691fff;
+      }
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+        padding: 15%;
+        max-width: 80%;
+        text-align: center;
+        z-index: 1000;
+      }
+
+      .popup h2 {
+        color: #333333;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .popup p {
+        color: #666666;
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+
+      .popup button {
+        background-color: #ff0000;
+        margin-left: 93%;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .popup button:hover {
+        margin-top: 3px;
+        background-color: #ff0000;
+      }
+
+      .close-but {
+        margin-left: 0px;
+        background-color: #ffffff;
+        color: #ff0000;
+        font-size: 26px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+      }
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+      }
+
+      /* Styles for the notice */
+      .design {
+        background-color: #691fff;
+        color: #000000;
+        padding: 12px 24px;
+        font-size: 16px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9999;
+      }
+      .call-button,
+      .whatsapp-button {
+        position: fixed;
+        z-index: 1000; /* Ensure they stay on top of other elements */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80px; /* Adjust the size as needed */
+        height: 80px; /* Make height equal to width for a perfect circle */
+        border-radius: 50%; /* Make it a circle */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        text-decoration: none;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Add transition for box-shadow */
+      }
+
+      .whatsapp-button {
+        bottom: 245px; /* Distance from the bottom */
+        right: 6px; /* Distance from the right */
+      }
+
+      .call-button {
+        bottom: 330px; /* Distance from the bottom */
+        right: 6px; /* Distance from the right */
+      }
+
+      .whatsapp-button img,
+      .call-button img {
+        width: 70%; /* Adjust the icon size as needed */
+        height: auto;
+      }
+
+      .whatsapp-button:hover {
+        background-color: #7f8283; /* Darker green on hover */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Smaller shadow on hover */
+      }
+
+      .call-button:hover {
+        background-color: #cc2822; /* Darker blue on hover */
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Even smaller shadow on hover */
+      }
+
+      body,
+      html {
+        height: 70%;
+        margin: 0;
+      }
+
+      #slideshow {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="https://www.youtube.com/@ShakeITaBhi" class="call-button">
+      <img src="asset/assets/abhishek-music_files/youtube1.png" alt="Youtube" />
+    </a>
+    <a
+      href="mailto:shakeitabhi.business@gmail.com"
+      class="whatsapp-button"
+      target="_blank"
+    >
+      <img src="asset/assets/abhishek-music_files/email1.png" alt="email" />
+    </a>
+
+    <div id="container">
+      <div class="csBG" id="cs-bg"></div>
+      <div class="transition-swipe-before"></div>
+      <div class="transition-swipe-after"></div>
+
+      <nav class="nav" id="nav">
+        <div class="nav__bar">
+          <a href="/" class="nav__logo">
+            <img src="1a.png" alt="Logo" width="60px" />
+          </a>
+
+          <a
+            id="menu-toggle"
+            class="nav__toggle"
+            aria-label="Open the menu"
+            role="”button”,"
+            tabindex="”0”,"
+            aria-expanded="”false”"
+          >
+            <span class="hamburger">
+              <span class="hamburger__line hamburger__top"></span>
+              <span class="hamburger__line hamburger__mid"></span>
+              <span class="hamburger__line hamburger__bottom"></span>
+            </span>
+            <span class="nav__toggleTopBorders"></span>
+            <span class="nav__toggleBottomBorders"></span>
+          </a>
+
+          <div class="nav__menuBg"></div>
         </div>
 
-        <div class="cursor" id="cursor">
-            <div class="cursor__loading">
-                <div class="brackets brackets--svg">
-                    <div class="brackets__inner">
-                        <div class="brackets__bracket brackets__tl">
-                            <svg
-                                width="45px"
-                                height="45px"
-                                viewbox="0 0 45 45"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                            >
-                                <path
-                                    class="fill"
-                                    d="M43.0769231,0 C44.1392308,0 45,0.860769231 45,1.92307692 L45,8.46153846 C45,9.52384615 44.1392308,10.3846154 43.0769231,10.3846154 L10.3846154,10.3846154 L10.3846154,43.0769231 C10.3846154,44.1392308 9.52384615,45 8.46153846,45 L1.92307692,45 C0.860769231,45 0,44.1392308 0,43.0769231 L0,1.92307692 C0,0.860769231 0.860769231,0 1.92307692,0 L43.0769231,0 Z"
-                                ></path>
-                            </svg>
-                        </div>
-                        <div class="brackets__bracket brackets__tr">
-                            <svg
-                                width="45px"
-                                height="45px"
-                                viewbox="0 0 45 45"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                            >
-                                <path
-                                    class="fill"
-                                    d="M43.0769231,0 C44.1392308,0 45,0.860769231 45,1.92307692 L45,8.46153846 C45,9.52384615 44.1392308,10.3846154 43.0769231,10.3846154 L10.3846154,10.3846154 L10.3846154,43.0769231 C10.3846154,44.1392308 9.52384615,45 8.46153846,45 L1.92307692,45 C0.860769231,45 0,44.1392308 0,43.0769231 L0,1.92307692 C0,0.860769231 0.860769231,0 1.92307692,0 L43.0769231,0 Z"
-                                ></path>
-                            </svg>
-                        </div>
-                        <div class="brackets__bracket brackets__bl">
-                            <svg
-                                width="45px"
-                                height="45px"
-                                viewbox="0 0 45 45"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                            >
-                                <path
-                                    class="fill"
-                                    d="M43.0769231,0 C44.1392308,0 45,0.860769231 45,1.92307692 L45,8.46153846 C45,9.52384615 44.1392308,10.3846154 43.0769231,10.3846154 L10.3846154,10.3846154 L10.3846154,43.0769231 C10.3846154,44.1392308 9.52384615,45 8.46153846,45 L1.92307692,45 C0.860769231,45 0,44.1392308 0,43.0769231 L0,1.92307692 C0,0.860769231 0.860769231,0 1.92307692,0 L43.0769231,0 Z"
-                                ></path>
-                            </svg>
-                        </div>
-                        <div class="brackets__bracket brackets__br">
-                            <svg
-                                width="45px"
-                                height="45px"
-                                viewbox="0 0 45 45"
-                                version="1.1"
-                                xmlns="http://www.w3.org/2000/svg"
-                                xmlns:xlink="http://www.w3.org/1999/xlink"
-                            >
-                                <path
-                                    class="fill"
-                                    d="M43.0769231,0 C44.1392308,0 45,0.860769231 45,1.92307692 L45,8.46153846 C45,9.52384615 44.1392308,10.3846154 43.0769231,10.3846154 L10.3846154,10.3846154 L10.3846154,43.0769231 C10.3846154,44.1392308 9.52384615,45 8.46153846,45 L1.92307692,45 C0.860769231,45 0,44.1392308 0,43.0769231 L0,1.92307692 C0,0.860769231 0.860769231,0 1.92307692,0 L43.0769231,0 Z"
-                                ></path>
-                            </svg>
-                        </div>
-                    </div>
-                </div>
+        <div class="nav__overlay" id="menu-overlay"></div>
+
+        <div class="nav__menu">
+          <div class="nav__links">
+            <a href="about.html" class="nav__link"
+              ><span class="nav__linkInner">About</span></a
+            >
+            <a
+              href="asset/assets/abhishek-music_files/resume.pdf"
+              class="nav__link"
+              download="/asset/assets/abhishek-music_files/resume.pdf"
+              ><span class="nav__linkInner">Resume</span></a
+            >
+            <a href="" class="nav__link"
+              ><span class="nav__linkInner">Shop soon!</span></a
+            >
+            <a href="mailto:shakeitabhi.business@gmail.com" class="nav__link"
+              ><span class="nav__linkInner">Contact</span></a
+            >
+          </div>
+
+          <div class="nav__buttons">
+            <a
+              href="https://www.youtube.com/@ShakeITaBhi"
+              target="_blank"
+              class="button nav__menuButton"
+            >
+              <span class="button__inner">YouTube</span>
+            </a>
+            <div class="socialLinks">
+              <a
+                class="socialLinks__link"
+                href="https://www.instagram.com/therealabhishekyadav/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Instagram
+              </a>
+              <a
+                class="socialLinks__link"
+                href="https://www.linkedin.com/in/therealabhishekyadav"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Linkedin
+              </a>
+              <a
+                class="socialLinks__link"
+                href="https://x.com/realabhishekydv"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Twitter
+              </a>
             </div>
-            <div class="cursor__drag">
-                <div class="cursor__dragIcon"></div>
+          </div>
+
+          <div class="nav__footer">
+            <span class="footer__spacer"> | </span>
+          </div>
+        </div>
+      </nav>
+      <main id="main" class="animation-move">
+        <section class="homeHeader scroll pal">
+          <div class="homeHeader__bg">
+            <canvas
+              class="wobble"
+              data-wobble-color="#212224"
+              data-wobble-linewidth="0.01"
+              data-wobble-cellsize="0.025"
+            ></canvas>
+          </div>
+
+          <div class="homeHeader__content">
+            <h1 class="h1 homeHeader__heading">
+              <span class="cycle anima cycle--pal" data-anima-delay="25"
+                >~Explore~Enjoy~Experience</span
+              >
+            </h1>
+
+            <div
+              class="homeHeader__paragraph body body--large anima fadeUp"
+              data-anima-delay="36"
+            >
+              <p class="plaintext">
+                I love making quality content for knowledge and entertainment!
+              </p>
             </div>
-        </div>
-        <svg
-            width="563"
-            height="170"
-            viewbox="0 0 563 170"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            id="wobble-svg"
-        >
-            <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M369.57 151.257C369.567 130.952 369.561 83.6875 369.561 40.3729C369.511 19.9343 351.891 3.35359 331.851 3.00378C322.701 2.84387 311.031 7.77111 304.861 14.6972C298.701 7.77111 287.021 2.84387 277.881 3.00378C257.851 3.35359 240.231 19.9343 240.201 40.3729C240.201 83.2711 240.207 130.043 240.21 150.663L240.21 150.84V150.885L240.211 157.514L240.211 161.216C240.211 163.814 242.811 166.413 245.411 166.413H255.811C258.731 166.413 261.011 163.814 261.011 161.216L261.011 159.218L261.01 150.886V150.628C261.007 129.989 261.001 83.2463 261.001 40.3729C261.001 31.278 268.801 23.8022 277.901 23.8022C287.001 23.8022 294.481 31.278 294.481 40.3729C294.481 83.4256 294.487 130.38 294.49 150.885C294.491 156.613 294.491 160.277 294.491 161.216C294.491 163.814 296.761 166.413 299.691 166.413H310.091C313.011 166.413 315.291 163.814 315.291 161.216L315.29 153.018L315.29 150.886V150.628C315.287 129.99 315.281 83.2464 315.281 40.3729C315.281 31.278 322.441 23.8022 331.861 23.8022C341.281 23.8022 348.761 31.278 348.761 40.3729C348.761 83.4256 348.767 130.38 348.77 150.885L348.77 153.017L348.771 161.216C348.771 163.814 351.041 166.413 353.971 166.413H364.371C367.291 166.413 369.571 163.814 369.571 161.216C369.571 160.298 369.571 156.772 369.57 151.257ZM218.441 160.916C218.441 163.844 216.161 166.113 213.241 166.113H202.841C199.911 166.113 197.641 163.834 197.641 160.916C197.641 150.906 197.641 64.7875 197.641 26.137L197.641 8.21107C197.641 5.2827 199.911 3.00397 202.841 3.00397H213.241C215.841 3.00397 218.441 5.2827 218.441 8.20107V160.906V160.916ZM175.916 115.868L175.916 114.857L175.916 112.176C175.913 82.4783 175.91 48.7709 175.91 40.3732C175.85 20.1145 158.74 3.004 138.52 3.004C118.22 3.004 100.87 19.9346 100.83 40.3732C100.83 49.0959 100.834 85.1239 100.836 115.602L100.836 115.734L100.837 119.819C100.839 140.286 100.84 157.435 100.84 160.716C100.84 163.315 103.11 165.913 106.04 165.913H116.44C119.36 165.913 121.64 163.315 121.64 160.716C121.64 157.207 121.639 137.833 121.636 115.502C121.634 85.0444 121.63 49.0861 121.63 40.3732C121.63 31.2782 129.43 23.8024 138.53 23.8024C147.63 23.8024 155.11 31.2782 155.11 40.3732C155.11 48.6586 155.113 81.5803 155.116 110.981V111.223V111.273L155.116 113.505L155.116 114.746C155.118 137.395 155.12 157.167 155.12 160.716C155.12 163.315 157.39 165.913 160.32 165.913H170.72C173.64 165.913 175.92 160.716 175.92 160.716C175.92 157.243 175.919 138.228 175.917 116.187L175.916 115.868ZM79.08 160.716V40.6932H79.09C79.03 20.4445 61.92 3.33409 41.7 3.33409C21.39 3.3241 4.04 20.2646 4 40.6932V160.716C4 163.635 6.27 165.913 9.2 165.913H19.6C22.52 165.913 24.8 163.645 24.8 160.716C24.8 150.073 24.7966 132.422 24.7938 117.658V117.648V117.644V117.642V117.642C24.7917 107.037 24.79 97.9246 24.79 93.9735H58.27C58.27 97.9287 58.2718 107.059 58.2738 117.68V117.698L58.2738 117.739V117.767C58.2766 132.509 58.28 150.101 58.28 160.716C58.28 163.635 60.55 165.913 63.48 165.913H73.88C76.8 165.913 79.08 163.645 79.08 160.716ZM41.69 24.1225C50.79 24.1225 58.27 31.5983 58.27 40.6932V73.1851H24.79V40.6932C24.79 31.5983 32.59 24.1225 41.69 24.1225ZM466.391 51.0186L466.391 51.1511C466.403 82.0865 466.416 115.54 466.389 128.934C466.349 149.272 449.409 166.613 428.999 166.623C408.509 166.623 391.319 149.462 391.289 128.934C391.316 115.546 391.303 82.1228 391.291 51.2021V51.1383L391.291 51.0033C391.285 35.018 391.279 19.7149 391.279 8.2111C391.289 5.28274 393.889 3.00401 396.489 3.00401H406.889C409.819 3.00401 412.089 5.28274 412.089 8.20111C412.089 19.7061 412.095 35.0108 412.101 50.9976L412.101 51.1324V51.1965C412.113 82.1196 412.126 115.545 412.099 128.934C412.081 138.358 419.579 145.824 428.999 145.824C438.419 145.824 445.561 138.348 445.579 128.934C445.606 115.538 445.593 82.0843 445.581 51.1486L445.581 51.0157C445.575 35.0259 445.569 19.7178 445.569 8.2111C445.579 5.28274 447.849 3.00401 450.779 3.00401H461.179C464.109 3.00401 466.379 5.28274 466.379 8.20111V8.2111C466.379 19.7183 466.385 35.0277 466.391 51.0186ZM538.83 40.3732V51.417H538.84C538.84 54.3354 541.11 56.6141 544.04 56.6141H554.44C557.36 56.6141 559.64 54.3454 559.64 51.417V40.3732C559.58 20.1145 542.46 3.00401 522.25 3.00401C502.04 3.00401 484.89 20.1444 484.86 40.3732C484.86 47.3093 487.46 54.2421 492.66 61.1715L537.85 120.958C538.74 122.148 538.82 124.146 538.82 125.476V129.354C538.82 143.276 531.34 145.924 522.24 145.924C513.14 145.924 505.66 138.448 505.66 129.354V115.431C505.66 112.513 503.39 110.234 500.46 110.234H490.06C487.14 110.234 484.86 112.503 484.86 115.431V129.354C484.91 149.602 502.03 166.713 522.24 166.713C542.45 166.713 559.63 149.922 559.63 129.354C559.63 127.455 559.63 125.909 559.63 124.663C559.635 124.874 559.637 125.079 559.638 125.278C559.639 126.207 559.64 126.637 559.64 125.756C559.64 125.6 559.64 125.441 559.638 125.278C559.638 124.994 559.638 124.665 559.638 124.312C559.635 121.267 559.631 116.477 559.63 124.663C559.547 120.801 558.771 114.914 551.84 105.687C536.77 85.7578 521.71 65.8289 506.65 45.9001C505.997 45.0339 505.67 43.1916 505.67 40.3732C505.67 31.2782 513.15 23.8024 522.25 23.8024C531.35 23.8024 538.83 31.2782 538.83 40.3732Z"
-                fill="#E5E5E5"
+
+            <img
+              src="https://www.animusstudios.com//assets/images/ui/footer_icons.png"
+              class="anima fade"
+              data-anima-delay="37"
             />
-        </svg>
-        <div id="shaders">
-            <script id="vertexShader" type="x-shader/x-vertex">
-                    precision mediump float;
+          </div>
 
-                attribute vec2 a_position;
+          <div class="homeHeader__videoWrap anima" data-anima-delay="30">
+            <video
+              id="slideshow"
+              src="asset/assets/abhishek-music_files/SHakeITaBhi Brand Video 9mb.mp4"
+              autoplay
+              muted
+              loop
+            >
+              <!-- Placeholder image -->
+              Your browser does not support the video tag.
+            </video>
+            <div class="homeHeader__introVideo">
+              <div
+                class="wistiaEmbed wistia--wait"
+                data-wistia="lrhv3bwq"
+                data-wistia-autoplay
+                data-wistia-loop
+                data-wistia-muted
+                data-wistia-noplaybar="1"
+              ></div>
+            </div>
+          </div>
 
-                void main() {
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              var video = document.getElementById("slideshow");
+              video.play();
+            });
+          </script>
+        </section>
 
-                  vec2 clipSpace = (a_position * 2.0) - 1.0;
-                  gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);
-                }
-            </script>
-            <script id="fragmentShader" type="x-shader/x-fragment">
-                    precision mediump float;
+        <section class="homeAbout section section--white accent-blue">
+          <h2 class="h2 scroll">
+            <span class="cycle anima"> Hello! </span>
+          </h2>
 
-                #define NUM_OCTAVES 5
+          <div class="homeAbout__content scroll">
+            <div class="richtext body body--bumpUp">
+              <p>
+                My name is Abhishek and I am a 4th year student at an art and
+                design institute - Srishti Institute of Art, Design and
+                Technology. I'm an occassionally extrovert guy who makes videos
+                that add happiness and knowledge to my subscribers' lives. If
+                you want to know about art, Design and have entertainment
+                altogether, join me during my college life! Let's grow and have
+                fun together!.
+              </p>
+            </div>
 
+            <a href="about.html" class="button button--accent">
+              <span class="button__inner">About</span>
+            </a>
+          </div>
 
-                uniform vec2 u_resolution;
-                uniform float u_time;
-                uniform float u_scroll;
-                uniform vec2 u_mouse;
+          <div class="homeAbout__decoBlocks dbs u-hideMobile">
+            <div class="db anima scroll cs11 ce11 rs1 re2 red brtl brtr"></div>
+            <div class="db anima scroll cs10 ce11 rs3 re4 black">
+              <picture>
+                <img
+                  src="asset/assets/abhishek-music_files/315899542_429151356087814_8904967392248218121_n.webp"
+                  alt="abhishek"
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs1 ce1 rs5 re5 white">
+              <picture>
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=9a064981814ce92f40b4028fcaf91675 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=9a064981814ce92f40b4028fcaf91675 2x
+                  "
+                  media="(max-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f 2x
+                  "
+                  media="(max-width: 800px)"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=9a064981814ce92f40b4028fcaf91675 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=9a064981814ce92f40b4028fcaf91675 2x
+                  "
+                  media="(min-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f 2x
+                  "
+                  media="(min-width: 800px)"
+                />
+                <img
+                  src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=160&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=c9f5c8e1f79ab6454b9f6e1d31a58e6f"
+                  width="160"
+                  height="160"
+                  class="img"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs3 ce4 rs5 re5 blue brtl"></div>
+            <div class="db anima scroll cs5 ce7 rs5 re6 black">
+              <picture>
+                <img
+                  src="asset/assets/abhishek-music_files/419904890_1072239070660919_3679322503260039185_n.heic"
+                  alt="abhi's"
+                />
+              </picture>
+            </div>
+            <div
+              class="db anima scroll cs8 ce8 rs5 re5 yellow brtl brtr brbl brbr"
+            ></div>
+            <div class="db anima scroll cs9 ce10 rs5 re6 blue">
+              <picture>
+                <img
+                  src="asset/assets/abhishek-music_files/abhi18.jpg"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs1 ce2 rs6 re8 red brbr">
+              <picture>
+                <img
+                  src="asset/assets/abhishek-music_files/abhi19.png"
+                  alt="abhishek"
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs5 ce7 rs7 re8 white">
+              <picture>
+                <img
+                  src="asset/assets/abhishek-music_files/abhishek.png"
+                  alt="abhis"
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs11 ce11 rs7 re8 red">
+              <picture>
+                <img
+                  src="asset/assets/abhishek-music_files/436513576_325545813873504_6423678331781002738_n.jpg"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs1 ce4 rs9 re10 black"></div>
+            <div class="db anima scroll cs8 ce10 rs9 re10 blue brbr"></div>
+          </div>
 
-                uniform vec3 u_color;
-                uniform float u_alpha;
-                uniform float u_cellSize;
-                uniform float u_lineWidth;
+          <div class="homeAbout__decoBlocks dbs u-showMobile">
+            <div class="db anima scroll cs1 ce3 rs1 re1 blue brtl"></div>
+            <div class="db anima scroll cs6 ce6 rs1 re1 white">
+              <picture>
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=e034414e3898d3ae1e641ee4a654d5df 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=e034414e3898d3ae1e641ee4a654d5df 2x
+                  "
+                  media="(max-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8 2x
+                  "
+                  media="(max-width: 800px)"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=e034414e3898d3ae1e641ee4a654d5df 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588407&amp;s=e034414e3898d3ae1e641ee4a654d5df 2x
+                  "
+                  media="(min-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8 2x
+                  "
+                  media="(min-width: 800px)"
+                />
+                <img
+                  src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph1.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588407&amp;s=8e3aaa8d390105c82eb864fa934ae5d8"
+                  width="150"
+                  height="150"
+                  class="img"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs1 ce1 rs2 re4 red brbr">
+              <picture>
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 2x
+                  "
+                  media="(max-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 2x
+                  "
+                  media="(max-width: 800px)"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 2x
+                  "
+                  media="(min-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 2x
+                  "
+                  media="(min-width: 800px)"
+                />
+                <img
+                  src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc"
+                  width="150"
+                  height="234"
+                  class="img"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs4 ce6 rs2 re4 black">
+              <picture>
+                <img
+                  src="asset/assets/abhishek-music_files/abhi17.jpg"
+                  alt="abhis"
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs1 ce3 rs5 re7 blue">
+              <picture>
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=0067511097a2f76dfddb558e5da7cc52 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=0067511097a2f76dfddb558e5da7cc52 2x
+                  "
+                  media="(max-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9 2x
+                  "
+                  media="(max-width: 800px)"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=0067511097a2f76dfddb558e5da7cc52 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=0067511097a2f76dfddb558e5da7cc52 2x
+                  "
+                  media="(min-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9 2x
+                  "
+                  media="(min-width: 800px)"
+                />
+                <img
+                  src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph2.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=e1dd93bc125d737d9c0197fea6641bc9"
+                  width="300"
+                  height="291"
+                  class="img"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs2 ce5 rs8 re10 black">
+              <picture>
+                <img
+                  src="asset/assets/abhishek-music_files/abhi16.jpg"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs1 ce6 rs12 re15 black"></div>
+            <div
+              class="db anima scroll cs6 ce6 rs8 re8 yellow brtl brtr brbl brbr"
+            ></div>
+            <div class="db anima scroll cs2 ce5 rs11 re13 white">
+              <picture>
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=9d6f79c0d2c9c97c603e93cbde568646 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=9d6f79c0d2c9c97c603e93cbde568646 2x
+                  "
+                  media="(max-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0 2x
+                  "
+                  media="(max-width: 800px)"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=9d6f79c0d2c9c97c603e93cbde568646 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=9d6f79c0d2c9c97c603e93cbde568646 2x
+                  "
+                  media="(min-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0 2x
+                  "
+                  media="(min-width: 800px)"
+                />
+                <img
+                  src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph4.jpg?w=300&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=ee9a8a180d36db83e484f66077c9a6f0"
+                  width="300"
+                  height="213"
+                  class="img"
+                  alt=""
+                />
+              </picture>
+            </div>
+            <div class="db anima scroll cs6 ce6 rs11 re14 red">
+              <picture>
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 2x
+                  "
+                  media="(max-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 2x
+                  "
+                  media="(max-width: 800px)"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=webp&amp;fit=crop&amp;dm=1715588406&amp;s=d9c4e170f70c5a55767df4ff55e87cfb 2x
+                  "
+                  media="(min-width: 800px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 1x,
+                    https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc 2x
+                  "
+                  media="(min-width: 800px)"
+                />
+                <img
+                  src="https://verdant-pademelon.transforms.svdcdn.com/production/db_ph3.jpg?w=150&amp;q=85&amp;fm=jpg&amp;fit=crop&amp;dm=1715588406&amp;s=add4fd10364014cbc9bca2e2b7ae93cc"
+                  width="150"
+                  height="234"
+                  class="img"
+                  alt=""
+                />
+              </picture>
+            </div>
+          </div>
 
-                float rand(vec2 n) {
-                	return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453);
-                }
+          <div class="homeAbout__bottom">
+            <p class="plaintext body body--bumpUp">Crafting stories!.</p>
+          </div>
+        </section>
+        <section class="aboutValues aboutValues--onlyBottom">
+          <div class="aboutValues__values pal scroll">
+            <div class="aboutValues__heading h1">
+              <span class="cycle anima">~My YouTube:</span>
+            </div>
+            <div class="aboutValues__cards">
+              <a href="https://youtube.com/@shakeitabhi"
+                ><div
+                  class="aboutValues__card aboutValues__card--blue pal-moveX"
+                  data-pal="-5"
+                  data-pal-push="6.5"
+                  data-pal-lerp="2.5"
+                >
+                  <div class="aboutValues__cardIcon">
+                    <picture>
+                      <img
+                        src="asset/assets/vlogs.png"
+                        alt="vlogs"
+                        width="110px"
+                        height="110px"
+                      />
+                    </picture>
+                  </div>
+                  <a href="https://youtube.com/@shakeitabhi"
+                    ><div class="aboutValues__cardContent">
+                      <div class="aboutValues__cardTitle">
+                        Vlogs & Entertainment
+                      </div>
+                      <div class="aboutValues__cardDescription">
+                        My channel where I love making quality content for
+                        knowledge and entertainment!
+                      </div>
+                    </div></a
+                  >
+                </div></a
+              >
+              <a href="https://youtube.com/@thestarlion"
+                ><div
+                  class="aboutValues__card aboutValues__card--red pal-moveX"
+                  data-pal="-5"
+                  data-pal-push="6.5"
+                  data-pal-lerp="4"
+                >
+                  <div class="aboutValues__cardIcon">
+                    <picture>
+                      <img
+                        src="asset/assets/artist.png"
+                        alt="art"
+                        width="110px"
+                        height="110px"
+                      />
+                    </picture>
+                  </div>
+                  <a href="https://youtube.com/@thestarlion?si=NPTZF2PEMWV0a-bU"
+                    ><div class="aboutValues__cardContent">
+                      <div class="aboutValues__cardTitle">
+                        Creativity & Performance
+                      </div>
+                      <div class="aboutValues__cardDescription">
+                        The same ideas are boring. This is my channel where I
+                        perform.
+                      </div>
+                    </div></a
+                  >
+                </div></a
+              >
+              <a href="https://youtube.com/@therealabhishekyadav"
+                ><div
+                  class="aboutValues__card aboutValues__card--yellow pal-moveX"
+                  data-pal="-5"
+                  data-pal-push="6.5"
+                  data-pal-lerp="5.5"
+                >
+                  <div class="aboutValues__cardIcon">
+                    <picture>
+                      <a href="https://youtube.com/@therealabhishekyadav"
+                        ><img
+                          src="asset/assets/motivational-speech.png"
+                          alt="motivational-speech"
+                          width="110px"
+                          height="110px"
+                      /></a>
+                    </picture>
+                  </div>
+                  <a href="https://youtube.com/@therealabhishekyadav">
+                    <div class="aboutValues__cardContent">
+                      <div class="aboutValues__cardTitle">
+                        Motivational & Inspiring
+                      </div>
+                      <div class="aboutValues__cardDescription">
+                        My third channel where I do motivational and
+                        inspirational videos are uploaded and and some other
+                        related videos which will help you in your life.
+                      </div>
+                    </div></a
+                  >
+                </div></a
+              >
+            </div>
+          </div>
 
-                float noise(vec2 p){
-                	vec2 ip = floor(p);
-                	vec2 u = fract(p);
-                	u = u*u*(3.0-2.0*u);
+          <div class="aboutValues__side sideDec">
+            <div class="sideDec__lines"></div>
+            <div class="sideDec__text">Abhishek</div>
+          </div>
+        </section>
 
-                	float res = mix(
-                		mix(rand(ip),rand(ip+vec2(1.0,0.0)),u.x),
-                		mix(rand(ip+vec2(0.0,1.0)),rand(ip+vec2(1.0,1.0)),u.x),u.y);
-                	return res*res;
-                }
+        <section class="section section--white clientLogos accent-blue">
+          <div class="video-container0">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/J1PfrVx-jsw?autoplay=1&mute=1"
+              title="YouTube video player"
+              allowfullscreen
+            ></iframe>
+          </div>
 
-                void main() {
+          <div class="video-container">
+            <a
+              href="https://www.youtube.com/embed/DFgsPpnctVY?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ><iframe
+                class="video"
+                width="auto"
+                height="100%"
+                src="https://www.youtube.com/embed/DFgsPpnctVY?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ></iframe
+            ></a>
+            <a
+              href="https://www.youtube.com/embed/lZx_GD-4OzA?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ><iframe
+                class="video"
+                width="auto"
+                height="100%"
+                src="https://www.youtube.com/embed/lZx_GD-4OzA?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ></iframe
+            ></a>
+            <a
+              href="https://www.youtube.com/embed/3J0AzVSmyAo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ><iframe
+                class="video"
+                width="auto"
+                height="100%"
+                src="https://www.youtube.com/embed/3J0AzVSmyAo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ></iframe
+            ></a>
+            <a
+              href="https://www.youtube.com/embed/fEDW7k6x81s?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ><iframe
+                class="video"
+                width="auto"
+                height="100%"
+                src="https://www.youtube.com/embed/fEDW7k6x81s?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ></iframe
+            ></a>
+            <a
+              href="https://www.youtube.com/embed/wLaQZjhXv0A?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ><iframe
+                class="video"
+                width="auto"
+                height="100%"
+                src="https://www.youtube.com/embed/wLaQZjhXv0A?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ></iframe
+            ></a>
+            <a
+              href="https://www.youtube.com/embed/01RnzgOyI8c?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ><iframe
+                class="video"
+                width="auto"
+                height="100%"
+                src="https://www.youtube.com/embed/01RnzgOyI8c?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ></iframe
+            ></a>
+            <a
+              href="https://www.youtube.com/embed/Mz2TfRmz9t0?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ><iframe
+                class="video"
+                width="auto"
+                height="100%"
+                src="https://www.youtube.com/embed/Mz2TfRmz9t0?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ></iframe
+            ></a>
+            <a
+              href="https://www.youtube.com/embed/dmPdx2wfhGo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ><iframe
+                class="video"
+                width="auto"
+                height="100%"
+                src="https://www.youtube.com/embed/dmPdx2wfhGo?controls=1&autoplay=0&mute=1&version=3&vq=hd240"
+              ></iframe
+            ></a>
+          </div>
 
-                  // Setup
-                  float axis = u_resolution.x;
-                  float pixel = 1.0 / axis;
-                  vec2 uv = gl_FragCoord.xy/axis;
-                  vec2 ms = u_mouse.xy/axis;
-                  float md = distance(uv, ms) - 0.01;
-                  vec2 mo = ms - uv;
-                  float sc = u_scroll/axis;
-                  float sd = distance(sc, uv.y);
+          <a
+            href="https://www.youtube.com/@ShakeITaBhi?sub_confirmation=1"
+            class="button footer__button button--small"
+          >
+            <span class="button__inner button--accent">
+              Visit & Subscribe!
+            </span>
+          </a>
+        </section>
 
+        <section class="section cs__next accent-blue section--white">
+          <div class="cs__nextBg">
+            <canvas
+              class="wobble"
+              data-wobble-color="#FFFFFF"
+              data-wobble-linewidth="0.6"
+              data-wobble-cellsize="0.07"
+            ></canvas>
+          </div>
 
-                  // Debug
-                  float smooth_scroll = smoothstep(0.0003, 0.0004, sd);
-                  vec3 scroll_debug = vec3(1.0 - smooth_scroll, 1.0 - smooth_scroll, 0.0);
-                  float smooth_mouse = smoothstep(0.0075, 0.008, md);
-                  vec3 mouse_debug = vec3(1.0 - smooth_mouse, 0.0, 0.0);
-                  vec3 debug = mouse_debug + scroll_debug;
+          <div class="section__inner">
+            <div class="cs__nextContent"></div>
+          </div>
+        </section>
 
-                  debug = vec3(0.0);
+        <footer class="footer pal">
+          <div
+            class="footer__inner pal-moveY pal-clamp"
+            data-pal="6"
+            data-pal-push="1.5"
+          >
+            <div class="footer__top">
+              <a href="/" class="footer__logo">
+                <img src="1a.png" alt="logo" width="60px" />
+              </a>
 
-                  // Warping
-                  vec2 warp = uv;
-                  float plx = uv.y - sc * 0.1;
-                  float down = plx * 25.0;
+              <div class="footer__links">
+                <div class="footer__linkCol">
+                  <a href="about.html" class="footer__link underlink">About</a>
 
-                  float y_amt = pow(max(0.0, 0.8 - uv.y), 2.0);
-                  float m_amt = pow(1.0 - md, 5.0);
+                  <a
+                    href="asset/assets/abhishek-music_files/resume.pdf"
+                    class="footer__link underlink"
+                    >Resume</a
+                  >
 
-                  float amt = y_amt * 1.0 + m_amt * -1.0 * (1.0 + noise(vec2(uv.x*2.0, u_time)) * 0.5);
+                  <a class="footer__link underlink">Shop Soon!</a>
+                  <a
+                    href="mailto:shakeitabhi.business@gmail.com"
+                    class="footer__link underlink"
+                    ><span class="nav__linkInner">Contact</span></a
+                  >
+                </div>
+                <div class="footer__linkCol"></div>
+                <div class="footer__linkCol footer__linkCta">
+                  <div class="form-container">
+                    <form action="save_email.php" method="post">
+                      <input
+                        type="email"
+                        name="email"
+                        style="color: white; padding: 15px"
+                        placeholder="Drop Email here!"
+                        required
+                      />
+                      <input type="submit" value="Submit" />
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-                  // amt = 1.0;
+          <div class="footer__mid scroll">
+            <span class="footer__bigText anima cycle">Shake It Abhi!</span>
+            <div class="footer__subscribe"></div>
+            <div class="footer__decorations">
+              <a
+                class="iconButton iconButton--arrow"
+                onclick="lenis.scrollTo(0);"
+                href="/"
+              >
+                <span class="iconButton__arrow">
+                  <svg
+                    width="26px"
+                    height="20px"
+                    viewbox="0 0 26 20"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      class="fill"
+                      d="M25.8915513,10.2890553 C26.0173702,9.99206548 26.0173702,9.65612614 25.8915513,9.35913628 C25.8286419,9.20942418 25.7385951,9.07553531 25.6238778,8.96355553 L16.9029027,0.356935555 C16.420597,-0.118978518 15.6397799,-0.118978518 15.1587077,0.356935555 C14.676402,0.831632456 14.676402,1.60210204 15.1587077,2.07801612 L20.8995023,7.74273247 C21.2226842,8.06163142 20.9932497,8.60692427 20.5356144,8.60692427 L1.23351841,8.60692427 C0.551382727,8.60692427 0,9.15221712 0,9.82409581 C0,10.4959745 0.551382727,11.0412674 1.23351841,11.0412674 L20.5356144,11.0412674 C20.9932497,11.0412674 21.2226842,11.5865602 20.8995023,11.9066763 L15.1587077,17.5701755 C14.676402,18.0460896 14.676402,18.8165592 15.1587077,19.2912561 C15.3992438,19.5298217 15.7150245,19.6478873 16.0308052,19.6478873 C16.3465859,19.6478873 16.6623666,19.5298217 16.9029027,19.2912561 L25.6238778,10.6858533 C25.7385951,10.5726563 25.8286419,10.4387674 25.8915513,10.2890553"
+                    ></path>
+                  </svg>
+                </span>
+                <span class="iconButton__arrow">
+                  <svg
+                    width="26px"
+                    height="20px"
+                    viewbox="0 0 26 20"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <path
+                      class="fill"
+                      d="M25.8915513,10.2890553 C26.0173702,9.99206548 26.0173702,9.65612614 25.8915513,9.35913628 C25.8286419,9.20942418 25.7385951,9.07553531 25.6238778,8.96355553 L16.9029027,0.356935555 C16.420597,-0.118978518 15.6397799,-0.118978518 15.1587077,0.356935555 C14.676402,0.831632456 14.676402,1.60210204 15.1587077,2.07801612 L20.8995023,7.74273247 C21.2226842,8.06163142 20.9932497,8.60692427 20.5356144,8.60692427 L1.23351841,8.60692427 C0.551382727,8.60692427 0,9.15221712 0,9.82409581 C0,10.4959745 0.551382727,11.0412674 1.23351841,11.0412674 L20.5356144,11.0412674 C20.9932497,11.0412674 21.2226842,11.5865602 20.8995023,11.9066763 L15.1587077,17.5701755 C14.676402,18.0460896 14.676402,18.8165592 15.1587077,19.2912561 C15.3992438,19.5298217 15.7150245,19.6478873 16.0308052,19.6478873 C16.3465859,19.6478873 16.6623666,19.5298217 16.9029027,19.2912561 L25.6238778,10.6858533 C25.7385951,10.5726563 25.8286419,10.4387674 25.8915513,10.2890553"
+                    ></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
 
-                  warp += vec2(sin(u_time * -1.5 + down) * 0.06 * amt, 0.0);
+          <div class="footer__bottom">
+            <span class="footer__legal">
+              <a>All Rights Reserved <span>&copy; 2024</span></a>
+            </span>
+            <span class="footer__social underlink">
+              <div class="socialLinks">
+                <a
+                  class="socialLinks__link"
+                  href="https:/youtube.com/@shakeitabhi/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Youtube
+                </a>
+                <a
+                  class="socialLinks__link"
+                  href="https://www.instagram.com/therealabhishekyadav/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Instagram
+                </a>
+                <a
+                  class="socialLinks__link"
+                  href="https://www.linkedin.com/in/therealabhishekyadav/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Linkedin
+                </a>
+                <a
+                  class="socialLinks__link"
+                  href="https://x.com/realabhishekydv"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Twitter
+                </a>
+              </div>
+            </span>
+            <span class="footer__legal underlink"> </span>
+          </div>
+        </footer>
+      </main>
+    </div>
 
-
-
-                  // Content
-                  vec3 content = vec3(0.0);
-
-                  // Calculate cell size based on the axis variable
-                  float cellSize = u_cellSize;
-                  float lineWidth = u_lineWidth;
-                  // float cellSize = 0.01 + ms.x * 0.2;
-                  // float lineWidth = ms.y;
-
-                  // Calculate grid line positions
-                  float xLines = smoothstep(0.98, 0.99, mod(warp.x - lineWidth/2.0 * cellSize + cellSize/2.0, cellSize)/cellSize + lineWidth);
-                  // float yLines = floor(mod(plx - lineWidth/2.0 * cellSize + cellSize/2.0, cellSize)/cellSize + lineWidth);;
-                  float yLines = 0.0;
-
-                  // Combine grid lines to create the grid pattern
-                  float grid = max(xLines, yLines);
-                  content += vec3(grid * (0.7 + (1.0 - md)*0.3) * u_color * u_alpha);
-
-                  // Output
-
-
-                  vec3 color = content + debug;
-                  float alpha = max(max(color.r, color.g), color.b) ;
-                  gl_FragColor = vec4(color, alpha);
-                }
-            </script>
+    <div class="cursor" id="cursor">
+      <div class="cursor__loading">
+        <div class="brackets brackets--svg">
+          <div class="brackets__inner">
+            <div class="brackets__bracket brackets__tl">
+              <svg
+                width="45px"
+                height="45px"
+                viewbox="0 0 45 45"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  class="fill"
+                  d="M43.0769231,0 C44.1392308,0 45,0.860769231 45,1.92307692 L45,8.46153846 C45,9.52384615 44.1392308,10.3846154 43.0769231,10.3846154 L10.3846154,10.3846154 L10.3846154,43.0769231 C10.3846154,44.1392308 9.52384615,45 8.46153846,45 L1.92307692,45 C0.860769231,45 0,44.1392308 0,43.0769231 L0,1.92307692 C0,0.860769231 0.860769231,0 1.92307692,0 L43.0769231,0 Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="brackets__bracket brackets__tr">
+              <svg
+                width="45px"
+                height="45px"
+                viewbox="0 0 45 45"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  class="fill"
+                  d="M43.0769231,0 C44.1392308,0 45,0.860769231 45,1.92307692 L45,8.46153846 C45,9.52384615 44.1392308,10.3846154 43.0769231,10.3846154 L10.3846154,10.3846154 L10.3846154,43.0769231 C10.3846154,44.1392308 9.52384615,45 8.46153846,45 L1.92307692,45 C0.860769231,45 0,44.1392308 0,43.0769231 L0,1.92307692 C0,0.860769231 0.860769231,0 1.92307692,0 L43.0769231,0 Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="brackets__bracket brackets__bl">
+              <svg
+                width="45px"
+                height="45px"
+                viewbox="0 0 45 45"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  class="fill"
+                  d="M43.0769231,0 C44.1392308,0 45,0.860769231 45,1.92307692 L45,8.46153846 C45,9.52384615 44.1392308,10.3846154 43.0769231,10.3846154 L10.3846154,10.3846154 L10.3846154,43.0769231 C10.3846154,44.1392308 9.52384615,45 8.46153846,45 L1.92307692,45 C0.860769231,45 0,44.1392308 0,43.0769231 L0,1.92307692 C0,0.860769231 0.860769231,0 1.92307692,0 L43.0769231,0 Z"
+                ></path>
+              </svg>
+            </div>
+            <div class="brackets__bracket brackets__br">
+              <svg
+                width="45px"
+                height="45px"
+                viewbox="0 0 45 45"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <path
+                  class="fill"
+                  d="M43.0769231,0 C44.1392308,0 45,0.860769231 45,1.92307692 L45,8.46153846 C45,9.52384615 44.1392308,10.3846154 43.0769231,10.3846154 L10.3846154,10.3846154 L10.3846154,43.0769231 C10.3846154,44.1392308 9.52384615,45 8.46153846,45 L1.92307692,45 C0.860769231,45 0,44.1392308 0,43.0769231 L0,1.92307692 C0,0.860769231 0.860769231,0 1.92307692,0 L43.0769231,0 Z"
+                ></path>
+              </svg>
+            </div>
+          </div>
         </div>
-        <script src="asset/gh/studio-freight/lenis@1.0.17/bundled/lenis.min.js"></script>
+      </div>
+      <div class="cursor__drag">
+        <div class="cursor__dragIcon"></div>
+      </div>
+    </div>
+    <svg
+      width="563"
+      height="170"
+      viewbox="0 0 563 170"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      id="wobble-svg"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M369.57 151.257C369.567 130.952 369.561 83.6875 369.561 40.3729C369.511 19.9343 351.891 3.35359 331.851 3.00378C322.701 2.84387 311.031 7.77111 304.861 14.6972C298.701 7.77111 287.021 2.84387 277.881 3.00378C257.851 3.35359 240.231 19.9343 240.201 40.3729C240.201 83.2711 240.207 130.043 240.21 150.663L240.21 150.84V150.885L240.211 157.514L240.211 161.216C240.211 163.814 242.811 166.413 245.411 166.413H255.811C258.731 166.413 261.011 163.814 261.011 161.216L261.011 159.218L261.01 150.886V150.628C261.007 129.989 261.001 83.2463 261.001 40.3729C261.001 31.278 268.801 23.8022 277.901 23.8022C287.001 23.8022 294.481 31.278 294.481 40.3729C294.481 83.4256 294.487 130.38 294.49 150.885C294.491 156.613 294.491 160.277 294.491 161.216C294.491 163.814 296.761 166.413 299.691 166.413H310.091C313.011 166.413 315.291 163.814 315.291 161.216L315.29 153.018L315.29 150.886V150.628C315.287 129.99 315.281 83.2464 315.281 40.3729C315.281 31.278 322.441 23.8022 331.861 23.8022C341.281 23.8022 348.761 31.278 348.761 40.3729C348.761 83.4256 348.767 130.38 348.77 150.885L348.77 153.017L348.771 161.216C348.771 163.814 351.041 166.413 353.971 166.413H364.371C367.291 166.413 369.571 163.814 369.571 161.216C369.571 160.298 369.571 156.772 369.57 151.257ZM218.441 160.916C218.441 163.844 216.161 166.113 213.241 166.113H202.841C199.911 166.113 197.641 163.834 197.641 160.916C197.641 150.906 197.641 64.7875 197.641 26.137L197.641 8.21107C197.641 5.2827 199.911 3.00397 202.841 3.00397H213.241C215.841 3.00397 218.441 5.2827 218.441 8.20107V160.906V160.916ZM175.916 115.868L175.916 114.857L175.916 112.176C175.913 82.4783 175.91 48.7709 175.91 40.3732C175.85 20.1145 158.74 3.004 138.52 3.004C118.22 3.004 100.87 19.9346 100.83 40.3732C100.83 49.0959 100.834 85.1239 100.836 115.602L100.836 115.734L100.837 119.819C100.839 140.286 100.84 157.435 100.84 160.716C100.84 163.315 103.11 165.913 106.04 165.913H116.44C119.36 165.913 121.64 163.315 121.64 160.716C121.64 157.207 121.639 137.833 121.636 115.502C121.634 85.0444 121.63 49.0861 121.63 40.3732C121.63 31.2782 129.43 23.8024 138.53 23.8024C147.63 23.8024 155.11 31.2782 155.11 40.3732C155.11 48.6586 155.113 81.5803 155.116 110.981V111.223V111.273L155.116 113.505L155.116 114.746C155.118 137.395 155.12 157.167 155.12 160.716C155.12 163.315 157.39 165.913 160.32 165.913H170.72C173.64 165.913 175.92 160.716 175.92 160.716C175.92 157.243 175.919 138.228 175.917 116.187L175.916 115.868ZM79.08 160.716V40.6932H79.09C79.03 20.4445 61.92 3.33409 41.7 3.33409C21.39 3.3241 4.04 20.2646 4 40.6932V160.716C4 163.635 6.27 165.913 9.2 165.913H19.6C22.52 165.913 24.8 163.645 24.8 160.716C24.8 150.073 24.7966 132.422 24.7938 117.658V117.648V117.644V117.642V117.642C24.7917 107.037 24.79 97.9246 24.79 93.9735H58.27C58.27 97.9287 58.2718 107.059 58.2738 117.68V117.698L58.2738 117.739V117.767C58.2766 132.509 58.28 150.101 58.28 160.716C58.28 163.635 60.55 165.913 63.48 165.913H73.88C76.8 165.913 79.08 163.645 79.08 160.716ZM41.69 24.1225C50.79 24.1225 58.27 31.5983 58.27 40.6932V73.1851H24.79V40.6932C24.79 31.5983 32.59 24.1225 41.69 24.1225ZM466.391 51.0186L466.391 51.1511C466.403 82.0865 466.416 115.54 466.389 128.934C466.349 149.272 449.409 166.613 428.999 166.623C408.509 166.623 391.319 149.462 391.289 128.934C391.316 115.546 391.303 82.1228 391.291 51.2021V51.1383L391.291 51.0033C391.285 35.018 391.279 19.7149 391.279 8.2111C391.289 5.28274 393.889 3.00401 396.489 3.00401H406.889C409.819 3.00401 412.089 5.28274 412.089 8.20111C412.089 19.7061 412.095 35.0108 412.101 50.9976L412.101 51.1324V51.1965C412.113 82.1196 412.126 115.545 412.099 128.934C412.081 138.358 419.579 145.824 428.999 145.824C438.419 145.824 445.561 138.348 445.579 128.934C445.606 115.538 445.593 82.0843 445.581 51.1486L445.581 51.0157C445.575 35.0259 445.569 19.7178 445.569 8.2111C445.579 5.28274 447.849 3.00401 450.779 3.00401H461.179C464.109 3.00401 466.379 5.28274 466.379 8.20111V8.2111C466.379 19.7183 466.385 35.0277 466.391 51.0186ZM538.83 40.3732V51.417H538.84C538.84 54.3354 541.11 56.6141 544.04 56.6141H554.44C557.36 56.6141 559.64 54.3454 559.64 51.417V40.3732C559.58 20.1145 542.46 3.00401 522.25 3.00401C502.04 3.00401 484.89 20.1444 484.86 40.3732C484.86 47.3093 487.46 54.2421 492.66 61.1715L537.85 120.958C538.74 122.148 538.82 124.146 538.82 125.476V129.354C538.82 143.276 531.34 145.924 522.24 145.924C513.14 145.924 505.66 138.448 505.66 129.354V115.431C505.66 112.513 503.39 110.234 500.46 110.234H490.06C487.14 110.234 484.86 112.503 484.86 115.431V129.354C484.91 149.602 502.03 166.713 522.24 166.713C542.45 166.713 559.63 149.922 559.63 129.354C559.63 127.455 559.63 125.909 559.63 124.663C559.635 124.874 559.637 125.079 559.638 125.278C559.639 126.207 559.64 126.637 559.64 125.756C559.64 125.6 559.64 125.441 559.638 125.278C559.638 124.994 559.638 124.665 559.638 124.312C559.635 121.267 559.631 116.477 559.63 124.663C559.547 120.801 558.771 114.914 551.84 105.687C536.77 85.7578 521.71 65.8289 506.65 45.9001C505.997 45.0339 505.67 43.1916 505.67 40.3732C505.67 31.2782 513.15 23.8024 522.25 23.8024C531.35 23.8024 538.83 31.2782 538.83 40.3732Z"
+        fill="#E5E5E5"
+      />
+    </svg>
+    <div id="shaders">
+      <script id="vertexShader" type="x-shader/x-vertex">
+            precision mediump float;
 
-        <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
-        <script src="asset/dist/scripts.min.js"></script>
-    </body>
+        attribute vec2 a_position;
+
+        void main() {
+
+          vec2 clipSpace = (a_position * 2.0) - 1.0;
+          gl_Position = vec4(clipSpace * vec2(1, -1), 0, 1);
+        }
+      </script>
+      <script id="fragmentShader" type="x-shader/x-fragment">
+            precision mediump float;
+
+        #define NUM_OCTAVES 5
+
+
+        uniform vec2 u_resolution;
+        uniform float u_time;
+        uniform float u_scroll;
+        uniform vec2 u_mouse;
+
+        uniform vec3 u_color;
+        uniform float u_alpha;
+        uniform float u_cellSize;
+        uniform float u_lineWidth;
+
+        float rand(vec2 n) {
+        	return fract(sin(dot(n, vec2(12.9898, 4.1414))) * 43758.5453);
+        }
+
+        float noise(vec2 p){
+        	vec2 ip = floor(p);
+        	vec2 u = fract(p);
+        	u = u*u*(3.0-2.0*u);
+
+        	float res = mix(
+        		mix(rand(ip),rand(ip+vec2(1.0,0.0)),u.x),
+        		mix(rand(ip+vec2(0.0,1.0)),rand(ip+vec2(1.0,1.0)),u.x),u.y);
+        	return res*res;
+        }
+
+        void main() {
+
+          // Setup
+          float axis = u_resolution.x;
+          float pixel = 1.0 / axis;
+          vec2 uv = gl_FragCoord.xy/axis;
+          vec2 ms = u_mouse.xy/axis;
+          float md = distance(uv, ms) - 0.01;
+          vec2 mo = ms - uv;
+          float sc = u_scroll/axis;
+          float sd = distance(sc, uv.y);
+
+
+          // Debug
+          float smooth_scroll = smoothstep(0.0003, 0.0004, sd);
+          vec3 scroll_debug = vec3(1.0 - smooth_scroll, 1.0 - smooth_scroll, 0.0);
+          float smooth_mouse = smoothstep(0.0075, 0.008, md);
+          vec3 mouse_debug = vec3(1.0 - smooth_mouse, 0.0, 0.0);
+          vec3 debug = mouse_debug + scroll_debug;
+
+          debug = vec3(0.0);
+
+          // Warping
+          vec2 warp = uv;
+          float plx = uv.y - sc * 0.1;
+          float down = plx * 25.0;
+
+          float y_amt = pow(max(0.0, 0.8 - uv.y), 2.0);
+          float m_amt = pow(1.0 - md, 5.0);
+
+          float amt = y_amt * 1.0 + m_amt * -1.0 * (1.0 + noise(vec2(uv.x*2.0, u_time)) * 0.5);
+
+          // amt = 1.0;
+
+          warp += vec2(sin(u_time * -1.5 + down) * 0.06 * amt, 0.0);
+
+
+
+          // Content
+          vec3 content = vec3(0.0);
+
+          // Calculate cell size based on the axis variable
+          float cellSize = u_cellSize;
+          float lineWidth = u_lineWidth;
+          // float cellSize = 0.01 + ms.x * 0.2;
+          // float lineWidth = ms.y;
+
+          // Calculate grid line positions
+          float xLines = smoothstep(0.98, 0.99, mod(warp.x - lineWidth/2.0 * cellSize + cellSize/2.0, cellSize)/cellSize + lineWidth);
+          // float yLines = floor(mod(plx - lineWidth/2.0 * cellSize + cellSize/2.0, cellSize)/cellSize + lineWidth);;
+          float yLines = 0.0;
+
+          // Combine grid lines to create the grid pattern
+          float grid = max(xLines, yLines);
+          content += vec3(grid * (0.7 + (1.0 - md)*0.3) * u_color * u_alpha);
+
+          // Output
+
+
+          vec3 color = content + debug;
+          float alpha = max(max(color.r, color.g), color.b) ;
+          gl_FragColor = vec4(color, alpha);
+        }
+      </script>
+    </div>
+    <script src="asset/gh/studio-freight/lenis@1.0.17/bundled/lenis.min.js"></script>
+
+    <script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+    <script src="asset/dist/scripts.min.js"></script>
+  </body>
 </html>
